@@ -21,7 +21,7 @@ class Snapshots(Base):
         dashboards = {}
         for dashboard_info in dashboards_info:
             uid = dashboard_info["uid"]
-            dashboards[dashboard_info['uri']] = self.api.dashboard.get_dashboard(uid);
+            dashboards[dashboard_info['uri']] = self.api.dashboard.get_dashboard(uid)
 
         snapshot_list = []
         for uri, dashboard in dashboards.items():
