@@ -51,7 +51,7 @@ class Snapshots(Base):
         snapshot_list = []
         for snapshot in snapshot:
             if key in snapshot["name"]:
-                url=snapshot["name"]+" : "+self.protocol+"://"+self.host+":3000/dashboard/snapshot/"+snapshot["key"]
+                url=snapshot["name"]+" : "+self.protocol+"://"+self.host+":"+str(self.port)+"/dashboard/snapshot/"+snapshot["key"]
                 snapshot_list.append(url)
 
         return snapshot_list
